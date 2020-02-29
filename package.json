@@ -10,6 +10,7 @@
   "scripts": {
     "setup": "lerna bootstrap",
     "monster": "lerna run start --scope=@learn/monster-rolodex",
+    "cloth": "lerna run start --scope=@learn/crwn-clothing",
     "dashboard": "lerna run start --scope=@learn/dashboard",
     "build": "lerna bootstrap && lerna run build --paralllel --stream",
     "start": "lerna run start --parallel --stream"

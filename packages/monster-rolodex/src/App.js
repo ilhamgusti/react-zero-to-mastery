@@ -10,7 +10,6 @@ function App() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-
     const fetchData = async ()=> {
       setLoading(true)
      const response = await fetch(endpoint);
@@ -19,19 +18,16 @@ function App() {
      setLoading(false)
     }
     fetchData()
-
   }, [])
 
   const filteredMonster =(monsters, keywords) =>{
-    return monsters.filter(monster=>
-                          monster.name
-                          .toLowerCase()
-                          .includes(keywords.toLowerCase()))
+    return monsters.filter(monster=> monster.name.toLowerCase().includes(keywords.toLowerCase()))
   }
 
   const handleSearch =(e)=>{
     setSearch(e.target.value)
   }
+
   return (
     <div className="App">
       <h1>Monster Rolodex</h1>
