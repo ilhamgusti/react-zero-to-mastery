@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "removing public directory"
+rm -rf public
+
+echo "copying dependencies code into public directory"
+cd node_modules/@learn
+rsync -Rq `find **/build` ../../public
+
+echo "package built successfully"

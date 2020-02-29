@@ -1,0 +1,17 @@
+{
+  "name": "learn",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "setup": "lerna bootstrap",
+    "monster": "lerna run start --scope=@learn/monster-rolodex",
+    "dashboard": "lerna run start --scope=@learn/dashboard",
+    "build": "lerna bootstrap && lerna run build --paralllel --stream",
+    "start": "lerna run start --parallel --stream"
+  }
+}
